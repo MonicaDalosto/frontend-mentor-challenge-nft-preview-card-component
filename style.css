@@ -44,18 +44,6 @@ p {
   border-radius: 8px;
 }
 
-@media screen and (max-width: 375px) {
-  .container {
-    /* width: 375px; */
-    /* height: 100%; */
-  }
-  .card-container {
-    /* width: 320px;
-    padding: 10px; */
-  };
-  
-}
-
 /* Container that will position the overlay. I need to adjust the width as needed; */
 .overlay-container {
   position: relative;
