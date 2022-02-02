@@ -33,28 +33,40 @@ p {
   display: flex;
   flex-direction: column;
   background-color: var(--color-mainBGdarkblue);
-  
+  overflow: hidden;
 }
 
 .card-container {
   background-color: var(--color-cardBGdarkblue);
   margin: auto auto;
   padding: 25px;
-  width: 340px;
-  border-radius: 12px;
+  width: 350px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    /* width: 375px; */
+    /* height: 100%; */
+  }
+  .card-container {
+    /* width: 320px;
+    padding: 10px; */
+  };
+  
 }
 
 /* Container that will position the overlay. I need to adjust the width as needed; */
 .overlay-container {
   position: relative;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 /* The image is responsive: */
 .equilibrium {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 /* The overlay effect (full height and width) - lays on top of the container and over the image */
@@ -66,7 +78,7 @@ p {
   opacity: 0;
   transition: 0.4s ease;
   background-color: var(--color-secondary);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 /* When the mouse over the container, fade in the overlay icon*/
@@ -87,7 +99,7 @@ p {
 h2 {
   color: var(--color-white);
   font-weight: 400;
-  font-size: 21px;
+  font-size: 22px;
   margin: 15px 0;
 }
 
@@ -106,7 +118,7 @@ p {
 
 .price-time-container p,
 .creator {
-  font-size: 15px;
+  font-size: 16px;
   margin: 15px 0;
   line-height: 2;
 }
