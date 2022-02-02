@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --color-primary: hsl(215, 51%, 70%); /* Soft blue */
+  --color-secondary: hsl(178, 100%, 50%); /* Cyan */
+
+  --color-mainBGdarkblue: hsl(217, 54%, 11%);
+  --color-cardBGdarkblue: hsl(216, 50%, 16%);
+  --color-linedarkblue: hsl(215, 32%, 27%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --font-primary: 'Outfit', sans-serif;
+}
+
+*, 
+*::before,
+*::after,
+main,
+body,
+div,
+img, 
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.container {
+  height: 100vh;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-mainBGdarkblue);
+  
+}
+
+.card-container {
+  background-color: var(--color-cardBGdarkblue);
+  margin: auto auto;
+  padding: 25px;
+  width: 340px;
+  border-radius: 12px;
+}
+
+/* Container that will position the overlay. I need to adjust the width as needed; */
+.overlay-container {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* The image is responsive: */
+.equilibrium {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease;
+  background-color: var(--color-secondary);
+  border-radius: 12px;
+}
+
+/* When the mouse over the container, fade in the overlay icon*/
+.overlay-container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+h2 {
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 21px;
+  margin: 15px 0;
+}
+
+p {
+  font-size: 18px;
+  color: var(--color-primary);
+  font-weight: 300;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.price-time-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-time-container p,
+.creator {
+  font-size: 15px;
+  margin: 15px 0;
+  line-height: 2;
+}
+
+.price {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.price::before {
+  content: url('images/icon-ethereum.svg');
+  padding-right: 7px;
+  line-height: 19px;
+  vertical-align: middle;
+}
+
+.time::before {
+  content: url('images/icon-clock.svg');
+  padding-right: 7px;
+  line-height: 17px;
+  vertical-align: middle;
+}
+
+.creator-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.division {
+  content:'';
+  width: 100%;
+  border-bottom: 1px solid var(--color-linedarkblue);
+}
+
+.creator-container img {
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-white);
+  margin-right: 15px;
+}
+
+.creator {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.creator span {
+  color: var(--color-white);
+}
+
+.on-hover:hover {
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-white);
+}
+.attribution a {
+  color: var(--color-primary);
+  /* color: hsl(228, 45%, 44%); */
+}
